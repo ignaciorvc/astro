@@ -1,4 +1,8 @@
 ---
+import Footer from '../components/Footer.astro';
+
+import Navigation from '../components/Navigation.astro';
+
 import '../styles/global.css';
 
 const pageTitle = "About Me";
@@ -44,9 +48,7 @@ const fontFamily = "helvetica";
         </style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Navigation />
 
         <h1>{pageTitle}</h1>
         <h2>... and my new Astro site!</h2>
@@ -73,5 +75,7 @@ const fontFamily = "helvetica";
         {finished && <p>I finished this tutorial!</p>}
 
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-	</body>
+	
+        <Footer />
+    </body>
 </html>
